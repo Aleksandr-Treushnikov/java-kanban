@@ -1,17 +1,13 @@
 package ru.yandex.study.kanban.model;
 
-
-
 public class Task {
 
-
-   private long id;
-  private   String name;
-  private   String description;
-  private  TaskStatus status;
+  private Long id;
+  private String name;
+  private String description;
+  private TaskStatus status;
 
   public Task(String name, String description, TaskStatus status) {
-
     this.name = name;
     this.description = description;
     this.status = status;
@@ -47,5 +43,15 @@ public class Task {
 
   public void setStatus(TaskStatus status) {
     this.status = status;
+  }
+
+  @Override
+  public String toString() {
+    return "Task{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", description='" + description + '\'' +
+        ", status=" + status +
+        '}';
   }
 }

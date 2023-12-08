@@ -3,17 +3,18 @@ package ru.yandex.study.kanban.repository;
 import java.util.List;
 import ru.yandex.study.kanban.model.Task;
 
-public interface Repository <T extends Task>{
+public interface Repository<T extends Task> {
 
 
-   T save(T task);
-   void delete(long id);
+  T save(T task);
 
-   T findById(long id);
+  void delete(long id);
 
-   List<T> findAll();
+  T findById(long id);
 
-   void deleteAll();
+  List<T> findAll();
+
+  void deleteAll();
 
 
 }
