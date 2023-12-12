@@ -1,11 +1,11 @@
 package ru.yandex.study.kanban.model;
 
 public enum TaskStatus {
-  NEW,
+    NEW,
 
-  IN_PROGRESS,
+    IN_PROGRESS,
 
-  DONE
+    DONE
 
 }
 

@@ -2,6 +2,7 @@ package ru.yandex.study.kanban;
 
 
 import java.util.List;
+import java.util.Set;
 import ru.yandex.study.kanban.model.Epic;
 import ru.yandex.study.kanban.model.Subtask;
 import ru.yandex.study.kanban.model.Task;
@@ -25,7 +26,7 @@ public class Main {
     System.out.println(newEpic);
     System.out.println();
     System.out.println("Создаем 1-ю сабтаску.");
-    Subtask newSubtask = manager.create(new Subtask("Задача 1.1", "Позвонить грузчикам", TaskStatus.NEW, 1L));
+    Subtask newSubtask = manager.create(new Subtask("Задача 1.1", "Позвонить грузчикам", TaskStatus.NEW, 0L));
     System.out.println(newSubtask);
     System.out.println();
     System.out.println("Создаем  2-й эпик.");
@@ -65,14 +66,13 @@ public class Main {
     System.out.println();
     System.out.println("Получаем весь список тасок");
     List<Task> allTask = (List<Task>) manager.getAll(Task.class);
-    
     System.out.println(allTask);
     System.out.println();
     System.out.println("Удаляем все таски");
     manager.deleteAll(Task.class);
     System.out.println();
     System.out.println("Получаем список сабтасков по получаемым id эпиков ");
-    List<Subtask> subtasks = manager.getByEpicId(existingTask1.getId());
+    Set<Subtask> subtasks = manager.getByEpicId(existingTask1.getId());
     System.out.println(subtasks);
   }
 }

@@ -6,15 +6,15 @@ import ru.yandex.study.kanban.model.Task;
 public interface Repository<T extends Task> {
 
 
-  T save(T task);
+    T save(T task);
 
-  void delete(long id);
+    void delete(long id);
 
-  T findById(long id);
+    T findById(long id);
 
-  List<T> findAll();
+    List<T> findAll();
 
-  void deleteAll();
+    void deleteAll();
 
 
 }
